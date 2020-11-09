@@ -37,11 +37,16 @@ class String
 
 		String(char c)
 		{
-			capacity = 100;
+			capacity = 5;
 			str = new char[capacity];
 			str[0] = c;
 			str[1] = '\0';
 			len = 1;
+		}
+
+		~String()
+		{
+			delete[] str;
 		}
 
 		char operator[](int index)
